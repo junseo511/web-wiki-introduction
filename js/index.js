@@ -34,6 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const commentItem = document.createElement("li");
         commentItem.classList.add("comment-item");
 
+        const authorIcon = document.createElement("div");
+        authorIcon.classList.add("comment-author-icon");
+        authorIcon.style.backgroundImage = "url('./images/comment-author-icon.png')";
+
         const commentContent = document.createElement("span");
         commentContent.classList.add("comment-content");
         commentContent.textContent = commentText;
@@ -46,10 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
             commentItem.remove();
         });
 
+        commentItem.appendChild(authorIcon);
         commentItem.appendChild(commentContent);
         commentItem.appendChild(deleteButton);
         commentList.appendChild(commentItem);
 
         commentInput.value = "";
+
+        alert("댓글이 등록되었습니다!");
     });
 });
