@@ -17,3 +17,39 @@ console.log(
 );
 
 console.log("알맞은 스크립트를 작성하세요");
+
+document.addEventListener("DOMContentLoaded", function () {
+    const commentInput = document.getElementById("comment-input");
+    const submitButton = document.getElementById("submit-comment");
+    const commentList = document.getElementById("comment-list");
+
+    submitButton.addEventListener("click", function () {
+        const commentText = commentInput.value.trim();
+
+        if (commentText === "") {
+            alert("댓글을 입력해주세요!");
+            return;
+        }
+
+        const commentItem = document.createElement("li");
+        commentItem.classList.add("comment-item");
+
+        const commentContent = document.createElement("span");
+        commentContent.classList.add("comment-content");
+        commentContent.textContent = commentText;
+
+        const deleteButton = document.createElement("button");
+        deleteButton.classList.add("delete-comment");
+        deleteButton.textContent = "삭제";
+
+        deleteButton.addEventListener("click", function () {
+            commentItem.remove();
+        });
+
+        commentItem.appendChild(commentContent);
+        commentItem.appendChild(deleteButton);
+        commentList.appendChild(commentItem);
+
+        commentInput.value = "";
+    });
+});
