@@ -17,8 +17,8 @@
     - 예시: 감상평 클릭 시 하단의 댓글란으로 이동
 
 ### ✅ 댓글 입력창
-- [ ] 최하단에 방문자가 남길 수 있는 댓글 입력창 구성
-- [ ] `<form>` 태그로 감싸서 구현
-- [ ] `<input type="text">` 요소 포함
-- [ ] 등록 버튼: `<button type="button"></button>` 사용
-- [ ] 취소 버튼: `<button type="reset"></button>` 사용
+- [x] 최하단에 방문자가 남길 수 있는 댓글 입력창 구성
+- [x] `<form>` 태그로 감싸서 구현
+- [x] `<input type="text">` 요소 포함
+- [x] 등록 버튼: `<button type="button"></button>` 사용
+- [x] 취소 버튼: `<button type="reset"></button>` 사용
