@@ -195,3 +195,33 @@ footer p {
   font-size: 14px;
   font-weight: bold;
 }
+
+.favorite-works {
+  text-align: start;
+  margin: 40px 0;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.work-item {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.work-item.wide {
+  grid-column: span 2;
+}
+
+.work-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
